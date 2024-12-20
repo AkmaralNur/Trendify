@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PayActivity"
+    android:padding="16dp">
+
+    <!-- Toolbar Include -->
+    <include layout="@layout/mytoolbar"/>
+
+    <!-- Payment Info Title -->
+    <TextView
+        android:id="@+id/tip"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@color/sea_foam"
+        android:textSize="25sp"
+        android:text="Пожалуйста, проверьте информацию о товарах"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <!-- RecyclerView for Payment Items -->
+    <RelativeLayout
+        android:layout_below="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="60dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <!-- Total and Submit Order Section -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Total Payment Amount -->
+        <TextView
+            android:id="@+id/tv_pay_total"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginRight="70dp"
+            android:layout_toLeftOf="@+id/tv_submitOrder"
+            android:textSize="20sp"
+            android:text="$45.26"
+            android:textColor="#E30732"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <!-- Submit Order Button -->
+        <TextView
+            android:id="@+id/tv_submitOrder"
+            android:text="Отправить заказ"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_shape"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</RelativeLayout>

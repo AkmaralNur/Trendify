@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Icon ImageView -->
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Username TextView -->
+    <TextView
+        android:id="@+id/tv_left_userName"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/iv_icon"
+        android:layout_marginTop="8dp"
+        android:text="Имя пользователя"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Time TextView -->
+    <TextView
+        android:id="@+id/tv_left_time"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:text="2021:12:12: "
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_left_userName"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Message TextView -->
+    <TextView
+        android:id="@+id/tv_message_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_left_time"
+        android:layout_toEndOf="@id/tv_left_userName"
+        android:layout_toRightOf="@id/tv_left_userName"
+        android:padding="8dp"
+        android:text="Информация！"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

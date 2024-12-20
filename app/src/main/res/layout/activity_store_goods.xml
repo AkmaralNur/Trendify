@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.StoreGoodsActivity"
+    android:padding="16dp">
+
+    <!-- Включение пользовательского toolbar -->
+    <include layout="@layout/mytoolbar"/>
+
+    <!-- Контейнер с информацией о магазине -->
+    <RelativeLayout
+        android:background="#66a5ad"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="8dp">
+
+        <!-- Название магазина -->
+        <TextView
+            android:id="@+id/tv_storeName_act"
+            android:text="Я - название магазина"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Линейный контейнер с рейтингом и статистикой продаж -->
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_below="@+id/tv_storeName_act"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp">
+
+            <!-- Рейтинг магазина -->
+            <TextView
+                android:id="@+id/tv_store_score_act"
+                android:text="5.0 баллов"
+                android:textStyle="bold"
+                android:textColor="#FF2256"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <!-- Статистика продаж за месяц -->
+            <TextView
+                android:id="@+id/tv_store_sell_act"
+                android:text="Месячные продажи: 457"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <!-- Краткое описание магазина -->
+        <TextView
+            android:id="@+id/tv_store_sign_act"
+            android:text="Отлично! Быстро и вкусно"
+            android:textColor="#0B0B0B"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:background="@drawable/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/ll"
+            android:layout_marginTop="3dp"/>
+
+        <!-- Изображение магазина -->
+        <ImageView
+            android:id="@+id/iv_store_act"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <!-- Вкладки (TabLayout) -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/home_newsTab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorColor="@color/wave"
+        app:tabSelectedTextColor="@color/wave"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <!-- Компонент ViewPager -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_news_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

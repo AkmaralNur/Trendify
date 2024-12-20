@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyAccountActivity"
+    android:padding="16dp">
+
+    <!-- Включение пользовательского toolbar -->
+    <include layout="@layout/mytoolbar" />
+
+    <!-- Контейнер с информацией о пользователе -->
+    <RelativeLayout
+        android:id="@+id/re_userName"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имя пользователя"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_username_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Контейнер с информацией о балансе -->
+    <RelativeLayout
+        android:id="@+id/re_money"
+        android:layout_below="@id/re_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Баланс"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Контейнер с номером телефона -->
+    <RelativeLayout
+        android:id="@+id/re_phoneNumb"
+        android:layout_below="@id/re_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер телефона"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_phoneNumb_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Контейнер с названием школы -->
+    <RelativeLayout
+        android:id="@+id/re_schoolName"
+        android:layout_below="@id/re_phoneNumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Возраст"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_schoolName_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Контейнер с номером общежития -->
+    <RelativeLayout
+        android:id="@+id/re_apartmentNumb"
+        android:layout_below="@id/re_schoolName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пол"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_apartmentNumb_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Контейнер с фото профиля -->
+    <RelativeLayout
+        android:id="@+id/re_personal_pic"
+        android:layout_below="@id/re_apartmentNumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фото профиля"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_personal_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</RelativeLayout>

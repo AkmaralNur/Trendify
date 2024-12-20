@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Сообщение пользователя -->
+    <TextView
+        android:id="@+id/tv_chat_me_message"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_right_time"
+        android:layout_toLeftOf="@+id/tv_right_userName"
+        android:padding="8dp"
+        android:text="Закрыть" />
+
+    <!-- Имя пользователя справа -->
+    <TextView
+        android:id="@+id/tv_right_userName"
+        android:layout_below="@id/iv_chat_imagr_right"
+        android:text="Это имя пользователя"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Время сообщения -->
+    <TextView
+        android:id="@+id/tv_right_time"
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        android:text="2021:12:12: "
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Изображение пользователя справа -->
+    <ImageView
+        android:id="@+id/iv_chat_imagr_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
